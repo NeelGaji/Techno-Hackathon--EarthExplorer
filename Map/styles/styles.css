@@ -11,11 +11,7 @@ body {
   body::--webkit-scrollbar-track{
     background:#1e1e24;
   }
-  body::--webkit-scrollbar-thumb{
-    background:;
-  }
-
-
+ 
   /* CSS styles for the header */
   header {
     background-color: #ff6347;
