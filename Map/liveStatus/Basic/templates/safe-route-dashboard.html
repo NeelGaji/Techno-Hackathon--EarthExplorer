@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Safe Route Dashboard</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <style>
@@ -60,10 +61,37 @@
         height: 500px;
       }
     </style>
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/Techno-Hackathon--EarthExplorer/Map/styles/styles.css">
+>>>>>>> 8a48d33d671009acbef2232c0f40981c6202742e
   </head>
   <body>
     <header>
-      <h1>Safe Route Dashboard</h1>
+      <section class="logo">
+        <h1>Safe Route Dashboard</h1>
+      </section>
+      <section class="icons">
+        <!-- Language - Section -->
+        <a href="">
+          <i class="fa fa-chevron-down" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+        
+        <!-- Search bar -->
+        <a href="">
+          <i class="fa fa-search" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+        
+        <!-- Notification Bell -->
+        <a href="">
+          <i class="fa fa-bell" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+        
+        <!-- Profile -->
+        <a href="">
+          <i class="fa fa-user" aria-hidden="true" style="font-size: 24px;"></i>
+        </a>
+      </section>
     </header>
     <main>
       <div class="box">
@@ -87,4 +115,21 @@
         <div id="map"></div>
       </div>
     </main>
+<<<<<<< HEAD
     
+=======
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      // initialize leaflet map
+      var map = L.map('map').setView([51.505, -0.09], 13);
+
+// add tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  tileSize: 512,
+  zoomOffset: -1
+}).addTo(map);
+>>>>>>> 8a48d33d671009acbef2232c0f40981c6202742e
