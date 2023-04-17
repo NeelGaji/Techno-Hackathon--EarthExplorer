@@ -3,7 +3,8 @@
   <head>
     <title>Safe Route Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="Deployment/Map/styles/styles.css">
+    <link rel="stylesheet" href="/Map/styles/styles.css">
+  
   </head>
   <body>
     <header>
@@ -54,9 +55,5 @@
         <div id="map"></div>
       </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-      var map = L.map('map').setView([28.2380, 83.9956], 11);
-		mapLink = "<a href='http://openstreetmap.org'>OpenStreetMap</a>";
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: 'Leaflet &copy; ' + mapLink + ', contribution', maxZoom: 18 }).addTo(map);
+    
       
