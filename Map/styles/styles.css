@@ -5,31 +5,77 @@ body {
     background-color: #F5F7FB;
   }
 
-  body::--webkit-scrollbar{
+  /* ::--webkit-scrollbar{
     width: 0.25rem;
   }
-  body::--webkit-scrollbar-track{
+  ::--webkit-scrollbar-track{
     background:#1e1e24;
   }
- 
+  ::--webkit-scrollbar-thumb{
+    background:#6649b8;
+  } */
+
+  body::-webkit-scrollbar {
+    width: 10px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    /* background: #494949;  */
+    background: whitesmoke;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    /* background-color: blue;     */
+    background: rgb(209,228,243);
+background: linear-gradient(90deg, rgba(209,228,243,1) 35%, rgba(184,224,251,0.49) 64%, rgba(141,207,252,1) 64%);
+    border-radius: 5px;      
+    border: 0px solid #6649b8;  
+  }
+
   /* CSS styles for the header */
   header {
     background-color: #ff6347;
     color: white;
     padding: 10px;
     text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
   }
 
+.logo{
+    display: inline-block;
+
+}
+.icons{
+    display: inline-block;
+    padding-top: 23px;
+    
+
+}
+
+.icons>a{
+    padding-right: 15px;
+    
+    /* vertical-align: center; */
+    
+}
   /* CSS styles for the main content */
   main {
-    margin: 20px;
+    margin: 10px;
   }
 
+  .side-cards{
+
+width: 25%;
+word-wrap: break-word;
+
+  }
   /* CSS styles for the boxes */
   .box {
     background-color: #f5f5f5;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
   }
