@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for Crime Report</title>
+</head>
+<style>
+.report-incident {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #CCC;
+  padding: 20px;
+  margin: 20px;
+}
+
+.report-incident h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.report-incident form {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-incident label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.report-incident input[type="text"],
+.report-incident textarea,
+.report-incident select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid #CCC;
+}
+
+.report-incident input[type="submit"] {
+  background-color: #007AFF;
+  color: #FFF;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.report-incident input[type="submit"]:hover {
+  background-color: #006FE6;
+}
+
+.sos-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sos-button {
+  background-color: #FF4D4D;
+  color: #FFF;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sos-button:hover {
+  background-color: #FF3333;
+}
+
+
+</style>
+<body>
+    <div class="report-incident">
+        <h2>Report Incident</h2>
+        <form action="#" method="POST">
+          <label for="location">Location:</label>
+          <input type="text" id="location" name="location" required>
+      
+          <label for="description">Description:</label>
+          <textarea id="description" name="description"></textarea>
+      
+          <label for="category">Category:</label>
+          <select id="category" name="category">
+            <option value="Assault">Assault</option>
+            <option value="Robbery">Robbery</option>
+            <option value="Theft">Theft</option>
+            <option value="Harassment">Harassment</option>
+            <option value="Vandalism">Vandalism</option>
+          </select>
+      
+          <div class="sos-button-container">
+            <button class="sos-button" type="button">SOS</button>
+          </div>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+      
+    
+</body>
+</html>
