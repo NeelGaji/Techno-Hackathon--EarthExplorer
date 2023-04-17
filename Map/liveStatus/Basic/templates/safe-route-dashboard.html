@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Safe Route Dashboard</title>
+    <style>
+      /* CSS styles for the body */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* CSS styles for the header */
+      header {
+        background-color: #ff6347;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* CSS styles for the main content */
+      main {
+        margin: 20px;
+      }
+
+      /* CSS styles for the boxes */
+      .box {
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+      }
+
+      /* CSS styles for the headings */
+      h2 {
+        margin-top: 0;
+      }
+
+      /* CSS styles for the buttons */
+      button {
+        padding: 10px;
+        background-color: white;
+        color: #ff6347;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #ff6347;
+        color: white;
+      }
+
+      /* CSS styles for the map container */
+      #map {
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Safe Route Dashboard</h1>
+    </header>
+    <main>
+      <div class="box">
+        <h2>Recent Incidents</h2>
+        <p>No recent incidents have been reported.</p>
+        <button>Report Incident</button>
+      </div>
+      <div class="box">
+        <h2>Route Planner</h2>
+        <p>Enter your starting point and destination to plan a safe route.</p>
+        <form>
+          <label for="start">Starting Point:</label>
+          <input type="text" id="start" name="start"><br><br>
+          <label for="destination">Destination:</label>
+          <input type="text" id="destination" name="destination"><br><br>
+          <button type="submit">Plan Route</button>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Map</h2>
+        <div id="map"></div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+      // initialize leaflet map
+      var map = L.map('map').setView([51.505, -0.09], 13);
+
+// add tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  tileSize: 512,
+  zoomOffset: -1
+}).addTo(map);

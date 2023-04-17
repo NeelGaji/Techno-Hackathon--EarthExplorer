@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>000</title>
+    <style>
+      /* CSS styles for the body */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* CSS styles for the left div box */
+      #left-box {
+        background-color: #1e90ff;
+        height: 100vh;
+        width: 50%;
+        float: left;
+        display: flex; /* Add display flex to center the gif */
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* CSS styles for the right div box */
+      #right-box {
+        background-color: #ADD8E6;
+        height: 100vh;
+        width: 50%;
+        float: right;
+        position: relative; /* Add position relative to position the button */
+      }
+
+      /* CSS styles for the content inside the div boxes */
+      .content {
+        padding: 20px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      /* CSS styles for the button */
+      #btn {
+        position: absolute; /* Position the button relative to the right div box */
+        top: 50%; /* Position the button vertically in the middle of the div box */
+        left: 50%; /* Position the button horizontally in the middle of the div box */
+        transform: translate(-50%, -50%); /* Center the button */
+        padding: 20px;
+        background-color: white;
+        color: #ff6347;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="left-box">
+      <img src="https://media.giphy.com/media/3oz8xLd9DJq2l2VFtu/giphy.gif" alt="Animated GIF" width="400">
+    </div>
+    <div id="right-box">
+      <div class="content">
+        <p>We make sure you travel safe</p>
+        <button id="btn" onclick="window.location.href = 'safe-route-dashboard.html';">Go to Safe Route Dashboard</button>      </div>
+    </div>
+  </body>
+</html>
