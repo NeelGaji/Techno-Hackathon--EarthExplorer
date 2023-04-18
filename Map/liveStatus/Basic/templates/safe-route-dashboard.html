@@ -35,6 +35,9 @@
       </section>
     </header>
     <main>
+      <div class="map">
+        <iframe src="index.html"></iframe>
+      </div>
       <div class="box">
         <h2>Recent Incidents</h2>
         <p>No recent incidents have been reported.</p>
@@ -51,29 +54,4 @@
           <button type="submit">Plan Route</button>
         </form>
       </div>
-        <div id="demo" style="width: 100%; height: 100vh"></div>
-        <script type="text/javascript" src="lib/leaflet/leaflet.js"></script>
-        <script type="text/javascript" src="leaflet-routing-machine.js"></script>
-        <script>
-
-          var map = L.map('demo').setView([-41.2858, 174.78682], 8);
-          var mapLink =
-          '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-          L.tileLayer(
-          'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: 'Map data &copy; ' + mapLink,
-          maxZoom: 18,
-          }).addTo(map);
-      
-          var routing = L.Routing.control({
-            waypoints: [
-            L.latLng(-41.2858, 174.78682),
-            L.latLng(-41.2858, 175.78682)
-            ]
-          })
-          routing.addTo(map);
-      
-        </script>
-      </body>
-    
-      
+        
