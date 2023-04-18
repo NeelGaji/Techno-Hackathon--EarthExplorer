@@ -35,7 +35,7 @@ fetch("../datasets/world_population.csv")
 
 // Add auto-rotation
 world.controls().autoRotate = true;
-world.controls().autoRotateSpeed = 0.8;
+world.controls().autoRotateSpeed = 1;
 
 
 // MASTI
