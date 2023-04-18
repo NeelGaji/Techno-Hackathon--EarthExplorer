@@ -3,13 +3,15 @@
   <head>
     <title>Safe Route Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="Deployment/Map/styles/styles.css">
+    <link rel="stylesheet" href="/Techno-Hackathon--EarthExplorer/Map/styles/styles.css">
   </head>
   <body>
     <header>
-      <section class="logo">
-        <h1>Safe Route Dashboard</h1>
-      </section>
+      <a href="./landing.html">
+        <section class="logo">
+          <h1>SafetyRoute</h1>
+        </section>
+      </a>
       <section class="icons">
         <!-- Language - Section -->
         <a href="">
@@ -37,11 +39,6 @@
       <section class="side-cards">
 
         <div class="box">
-          <h2>Recent Incidents</h2>
-          <p>No recent incidents have been reported.</p>
-          <button>Report Incident</button>
-        </div>
-        <div class="box">
           <h2>Route Planner</h2>
           <p>Enter your starting point and destination to plan a safe route.</p>
           <form>
@@ -49,16 +46,27 @@
             <input type="text" id="start" name="start"><br><br>
             <label for="destination">Destination:</label>
             <input type="text" id="destination" name="destination"><br><br>
-            <button type="submit">Plan Route</button>
+            <button type="submit" class="plan-route">Plan Route</button>
           </form>
+        </div>
+
+        <div class="box">
+          <h2>Recent Incidents</h2>
+          <p>No recent incidents have been reported.</p>
+          <!-- <button><a href="./form.html"> Incident </a></button> -->
+          <a href="./form.html">
+            <button> Incident</button>
+          </a>
         </div>
         
 
       </section>
-      <div class="box">
-        <h2>Map</h2>
-        <div id="map"></div>
-      </div>
+      <section class="main-map">
+        <div class="box">
+          <h2>Map</h2>
+          <div id="map"></div>
+        </div>
+      </section>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>

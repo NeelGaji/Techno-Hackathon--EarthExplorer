@@ -23,7 +23,21 @@ body {
     /* background: #494949;  */
     background: whitesmoke;
   }
-  
+  .box>a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
   body::-webkit-scrollbar-thumb {
     /* background-color: blue;     */
     background: rgb(209,228,243);
@@ -34,7 +48,7 @@ background: linear-gradient(90deg, rgba(209,228,243,1) 35%, rgba(184,224,251,0.4
 
   /* CSS styles for the header */
   header {
-    background-color: #ff6347;
+    background-color: #FFFFFF;
     color: white;
     padding: 10px;
     text-align: center;
@@ -45,11 +59,16 @@ background: linear-gradient(90deg, rgba(209,228,243,1) 35%, rgba(184,224,251,0.4
 
 .logo{
     display: inline-block;
+    margin-left: 10px;
+    color: #494949;
+    font-weight: 200;
+    font-weight: lighter;
 
 }
 .icons{
     display: inline-block;
     padding-top: 23px;
+    margin-right: 10px;
     
 
 }
@@ -63,6 +82,9 @@ background: linear-gradient(90deg, rgba(209,228,243,1) 35%, rgba(184,224,251,0.4
   /* CSS styles for the main content */
   main {
     margin: 10px;
+    /* display:flexbox; */
+    display: flex;
+    justify-content: start;
   }
 
   .side-cards{
@@ -71,37 +93,88 @@ width: 25%;
 word-wrap: break-word;
 
   }
+  .main-map{
+    width: 100%;
+  }
+  #start{
+    /* border:1px solid #494949; */
+  }
+  input[type=text]{
+    box-sizing: border-box;
+  border: 3px solid #ccc;
+  text-align: center;
+  margin: auto;
+  margin-left: 12px;
+    
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  padding: 10px;
+    margin-top: 8px;
+    width: 85%;
+  }
+
+  input[type=text]:focus{
+    border: 3px solid #242F41;
+    transform: scale(1.01);
+  }
   /* CSS styles for the boxes */
   .box {
     background-color: #f5f5f5;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
+    /* margin-bottom: 10px; */
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  }
+
+  .box > p{
+
   }
 
   /* CSS styles for the headings */
   h2 {
     margin-top: 0;
+    
   }
 
   /* CSS styles for the buttons */
   button {
     padding: 10px;
-    background-color: white;
-    color: #ff6347;
+    background-color: #242F41;
+    color: #979797;
     font-size: 16px;
+    width: 85%;
+    margin: 10px auto 0px auto;
+    text-align: center;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
   }
 
+  button,input{
+    margin-left: 12px;
+
+  }
   button:hover {
-    background-color: #ff6347;
+    transform: scale(1.1);
+    background-color: #4c607f;
     color: white;
   }
 
   /* CSS styles for the map container */
   #map {
     height: 500px;
+    /* width: 100%; */
+    /* margin-left: 50px; */
+  }
+  label{
+    font-weight: 600;
+  }
+  .plan-route{
+    justify-items: center;
+  }
+  .box > h2{
+    font-weight: 500;
   }
