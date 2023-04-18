@@ -37,7 +37,6 @@
 			routeWhileDragging: true,
 			showAlternatives:true,
 			show:true,
-			geocoder: L.Control.Geocoder.nominatim(),
 		    altLineOptions:{
 				styles: [
 					{color: 'black',opacity:0.15,weight:9},
@@ -46,65 +45,11 @@
 				]
 
 		    },
-	    router: L.routing.mapbox('api')
+        geocoder: L.Control.Geocoder.nominatim()
 	}).addTo(map);
-	routingControl.on('routesfound', function(e) {
-  var route = e.routes[0];
-  var secondRoute = L.Routing.control({
-    waypoints: [
-      L.latLng(21.6475,78.7465),
-      L.latLng(23.4452,79.6642)
-    ],
-    routeWhileDragging: true,
-    router: L.Routing.mapbox('api')
-  });
-
 
  
-  var geojson1 = {
-    type: "FeatureCollection",
-    features: [
-      {
-        type: "Feature",
-        geometry: route.geometry,
-        properties: {
-          name: "My First Route"
-        }
-      }
-    ]
-  };
-  var geojson2 = {
-    type: "FeatureCollection",
-    features: [
-      {
-        type: "Feature",
-        geometry: secondRoute.routes[0].geometry,
-        properties: {
-          name: "My Second Route"
-        }
-      }
-    ]
-  };
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://example.com/my-route-endpoint");
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
-      var routes = response.routes;
 
-      // Add each route to the map as a Leaflet layer
-      routes.forEach(function(route) {
-        L.geoJSON(route.geometry, {
-          style: {
-            color: 'red'
-          }
-        }).addTo(map);
-      });
-    }
-  };
-  xhr.send(JSON.stringify([geojson1, geojson2]));
-});
 
 	</script>
 </body>
