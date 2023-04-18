@@ -16,7 +16,7 @@
 
 	<script>
 
-		var map = L.map('demo').setView([-41.2858, 174.78682], 8);
+		var map = L.map('demo').setView([22.735656, 79.8925], 8);
 		var mapLink =
 		'<a href="http://openstreetmap.org">OpenStreetMap</a>';
 		L.tileLayer(
@@ -25,13 +25,21 @@
 		maxZoom: 18,
 		}).addTo(map);
 
-		var routing = L.Routing.control({
+		var control = L.Routing.control({
 			waypoints: [
-			L.latLng(-41.2858, 174.78682),
-			L.latLng(-41.2858, 175.78682)
-			]
-		})
-		routing.addTo(map);
+			L.latLng(21.6475,78.7465),
+			L.latLng(23.4452,79.6642)
+			],
+		    showAlternatives : true,
+		    altLineOptions:{
+				styles: [
+					{color: 'black',opacity:0.15,weight:9},
+					{color:'white',opacity:0.8,weight:2},
+					{color:'blue',opacity:0.5,weight:2}
+				]
+
+		    },
+	}).addTo(map);
 
 	</script>
 </body>
