@@ -8,11 +8,13 @@ geolocator = Nominatim(user_agent='crime_app')
 
 @app.route('/')
 def landing():
+    
     return render_template('index.html')
 
 @app.route('/prediction', methods = ['POST'])
 def prediction():
-    return render_template('routing.html')
+    r = {"route 1":32,"route 2":27}
+    return jsonify(r)
 
 @app.route('/fetch_recent_incident')
 def fetch_recent():
