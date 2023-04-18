@@ -101,9 +101,35 @@
           </div>
       
           <input type="submit" value="Submit">
-        </form>
-      </div>
-      
+          <script>
+            // Get the form element
+         const form = document.querySelector('#report-form');
+
+         // Attach event listener for form submission
+form.addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  
+  // Get the form data
+  const formData = new FormData(form);
+  
+  // Make a POST request to the server
+  fetch('/report-incident', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data
+    console.log(data);
+  })
+  .catch(error => {
+    // Handle the error
+    console.error(error);
+  });
+});
+
+          </script>
       
     
 </body>
